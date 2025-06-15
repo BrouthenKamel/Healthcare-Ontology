@@ -48,11 +48,6 @@
   <rdfs:range rdf:resource="#MedicalActor"/>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="#participatesInEvent">
-  <rdfs:domain rdf:resource="#Patient"/>
-  <rdfs:range rdf:resource="#MedicalEvent"/>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="#careType">
   <rdfs:domain rdf:resource="#MedicalEvent"/>
   <rdfs:range rdf:resource="#MedicalCare"/>
@@ -81,11 +76,6 @@
 <owl:ObjectProperty rdf:about="#hasEquipment">
   <rdfs:domain rdf:resource="#CareStructure"/>
   <rdfs:range rdf:resource="#MedicalEquipment"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#measures">
-  <rdfs:domain rdf:resource="#MedicalDevice"/>
-  <rdfs:range rdf:resource="#VitalSign"/>
 </owl:ObjectProperty>
 
 <owl:DatatypeProperty rdf:about="#hasPatientID">

@@ -250,10 +250,6 @@ with onto:
         """Specifies the medical actor responsible for treating a patient."""
         pass
 
-    class participatesInEvent(Patient >> MedicalEvent, ObjectProperty):
-        """Indicates patient involvement in a medical event (e.g., consultation)."""
-        pass
-
     # --- Medical Event Related ---
     class careType(MedicalEvent >> MedicalCare, ObjectProperty):
         """Links a medical event to its type of care (e.g., preventive)."""
@@ -281,10 +277,5 @@ with onto:
         """Indicates what equipment a facility contains."""
         pass
 
-    # --- Device Capability ---
-    class measures(MedicalDevice >> VitalSign, ObjectProperty):
-        """Defines what vital signs a device is capable of measuring."""
-        pass
-
 # Save the structured ontology to OWL file
-onto.save(file="healthcare_ontology.owl", format="rdfxml")
+onto.save(file="out/healthcare_ontology.owl", format="rdfxml")
